@@ -22,7 +22,7 @@ La URL local predeterminada es `http://localhost:3000`. Para una URL pública pr
 
 El workflow de GitHub Actions construye y publica el contenido de `out/` en GitHub Pages cuando se actualiza `main`, se ejecuta manualmente o recibe el evento `repository_dispatch` de tipo `sanity-content-update`.
 
-Al crear el repositorio, selecciona **GitHub Actions** como origen de GitHub Pages. El workflow calcula la URL y la ruta base del repositorio. Si usas un dominio propio, define las variables de repositorio `SITE_URL` y `BASE_PATH` (vacía para la raíz del dominio).
+Selecciona **GitHub Actions** como origen de GitHub Pages. El workflow obtiene la URL y la ruta base directamente de la configuración de Pages. Si usas un dominio propio, configúralo en los ajustes de GitHub Pages; el siguiente build utilizará ese dominio sin añadir el nombre del repositorio a las rutas.
 
 Cuando se incorpore Sanity, su webhook deberá enviar el evento `sanity-content-update` a GitHub con una credencial de alcance mínimo. El contenido editable se consultará en el build; así el HTML publicado saldrá directamente de Sanity y cada publicación activará un nuevo despliegue. No guardes esa credencial en el repositorio.
 

@@ -6,6 +6,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: `${siteName} | Proyecto en desarrollo`,
   description: siteDescription,
+  icons: { icon: "data:," },
   alternates: { canonical: `${siteUrl}/` },
   openGraph: {
     type: "website",
